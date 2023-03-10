@@ -3,9 +3,19 @@ body{
     color: #000;
     background: lightgoldenrodyellow;
 }
+@media only screen and (min-width: 820px){
+    body{
+        font-size: 3rem;
+    }
+}
+@media only screen and (min-width: 1600px){
+    body{
+        font-size: 4rem;
+    }
+}
 h1{
     font-size: 3rem;
-    margin: 5rem 3rem;
+    margin: 5rem 0 3rem;
 }
 .container{
     width: 100%;
@@ -27,15 +37,46 @@ h1{
     max-width: 100%;
     height: auto;
 }
+.accordion{
+    padding-bottom: 5rem;
+}
 .accordion-item {
     border-top: 1px solid gray;
     display: block;
+    transition: all 0.3s ease-out;
 }
 .accordion-item__header {
+    padding: 1rem 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .accordion-item__title {
+    margin-right: 2rem;
 }
 .accordion-item__icon {
+    transition: all 0.3s ease-out;
+    font-size: 6rem;
 }
 .accordion-item__image {
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+    max-width: 64rem;
+    margin: 0 auto;
+}
+.accordion-item__image img{
+    width: 0;
+    transition: all 0.3s ease-out;
+}
+.accordion-item__input{
+    display: none;
+}
+.accordion-item__input:checked ~ .accordion-item__header .accordion-item__icon{
+    transform: rotate(-45deg);
+}
+.accordion-item__input:checked ~ .accordion-item__image img{
+    width: 100%;
+    margin-bottom: 2rem;
 }
