@@ -46,7 +46,7 @@ h1{
     }
     .accordion:hover .accordion-item__title{
         color: #000;
-     }
+    }
 }
 .accordion-item {
     border-top: 1px solid gray;
@@ -61,6 +61,10 @@ h1{
     .accordion-item:hover .accordion-item__icon{
         transform: rotate(-45deg);
     }
+    .accordion-item:active .accordion-item__title, 
+    .accordion-item:active .accordion-item__icon{
+        color: lightskyblue;
+    }
 }
 .accordion-item__header {
     padding: 1rem 0;
@@ -71,11 +75,11 @@ h1{
 }
 .accordion-item__title {
     margin-right: 2rem;
-    transition: all 0.5s ease-out;
+    transition: all 0.3s ease-out;
 }
 @media only screen and (min-width: 1200px){
     .accordion-item__title{
-        color: blue;
+        color: lightseagreen;
     }
     .accordion-item__input:checked ~ .accordion-item__header .accordion-item__title{
         color: #000;
@@ -99,19 +103,19 @@ h1{
 .accordion-item__image {
     display: flex;
     justify-content: center;
-    transition: all 0.3s ease-out;
     max-width: 64rem;
     margin: 0 auto;
 }
 .accordion-item__image img{
     width: 0;
-    transition: all 0.3s ease-out;
+    transition: all 0.5s ease-out;
 }
 .accordion-item__input{
     display: none;
 }
 .accordion-item__input:checked ~ .accordion-item__header .accordion-item__icon{
     transform: rotate(-45deg);
+    color: #000;
 }
 .accordion-item__input:checked ~ .accordion-item__image img{
     width: 100%;
