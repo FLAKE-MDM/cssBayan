@@ -1,0 +1,41 @@
+body{
+    font: 400 2rem/1.2 Arial, sans-serif;
+    color: #000;
+    background: lightgoldenrodyellow;
+}
+h1{
+    font-size: 3rem;
+    margin: 5rem 3rem;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+@media only screen and (min-width: 820px){
+    .container{
+        max-width: 75rem;
+    }
+}
+@media only screen and (min-width: 1600px){
+    .container{
+        max-width: 100rem;
+    }
+}
+.img-fluid{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.accordion-item {
+    border-top: 1px solid gray;
+    display: block;
+}
+.accordion-item__header {
+}
+.accordion-item__title {
+}
+.accordion-item__icon {
+}
+.accordion-item__image {
+}
